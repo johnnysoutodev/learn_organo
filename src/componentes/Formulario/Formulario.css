@@ -11,3 +11,20 @@
     padding: 36px 64px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
 }
+
+.criar-card {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 28px 0;
+    width: 167px;
+    height: 80px;
+    background-color: #6278F7;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 0;
+    font-weight: 600;
+    vertical-align: middle;
+    cursor: pointer;
+}
