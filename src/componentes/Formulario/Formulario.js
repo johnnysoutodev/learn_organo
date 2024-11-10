@@ -6,8 +6,8 @@ import './Formulario.css';
 export const Formulario = () => {
 
     const times = [
-        'Programação',
         'Front-End',
+        'Programação',
         'DevOps',
         'Data Science',
         'UX e Design',
@@ -15,14 +15,19 @@ export const Formulario = () => {
         'Inovação e Gestão'
     ]
 
+    const aoSalvar = (evento) => {
+        evento.preventDefault()
+        console.log('Salvando dados...')  
+    }
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h1>Preencha os dados para criar o card do colaborador.</h1>
-                <CampoTexto label="Nome" placeholder="Digite o seu nome"/>
-                <CampoTexto label="Cargo" placeholder="Digite o seu cargo"/>
+                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o seu nome"/>
+                <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite o seu cargo"/>
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
-                <ListaSuspensa label="Times" itens={times} />
+                <ListaSuspensa obrigatorio={true} label="Times" itens={times} />
                 <Botao>
                     Criar Card
                 </Botao>
